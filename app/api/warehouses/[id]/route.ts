@@ -26,7 +26,6 @@ export async function PATCH(
       data: {
         name: body.name,
         location: body.location,
-        description: body.description,
       },
     });
     return NextResponse.json(warehouse);

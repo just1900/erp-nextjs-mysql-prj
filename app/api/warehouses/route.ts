@@ -8,7 +8,6 @@ export async function POST(request: Request) {
       data: {
         name: body.name,
         location: body.location,
-        description: body.description,
       },
     });
     return NextResponse.json(warehouse);

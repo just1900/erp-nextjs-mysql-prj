@@ -8,7 +8,6 @@ interface WarehouseData {
   id: string;
   name: string;
   location: string | null;
-  description: string | null;
 }
 
 export default function WarehousesPage() {
@@ -36,7 +35,6 @@ export default function WarehousesPage() {
     const payload = {
       name: formData.get("name"),
       location: formData.get("location"),
-      description: formData.get("description"),
     };
 
     const url = editingWarehouse ? `/api/warehouses/${editingWarehouse.id}` : "/api/warehouses";
@@ -166,14 +164,6 @@ export default function WarehousesPage() {
               name="location"
               defaultValue={editingWarehouse?.location || ""}
               className="w-full px-3 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20"
-            />
-          </div>
-          <div className="space-y-2">
-            <label className="text-sm font-medium text-slate-700">Description</label>
-            <textarea
-              name="description"
-              defaultValue={editingWarehouse?.description || ""}
-              className="w-full px-3 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 h-24"
             />
           </div>
           <div className="flex gap-3 pt-4">

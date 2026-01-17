@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { BarChart3, CreditCard, TrendingUp, TrendingDown, DollarSign } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface Voucher {
   id: string;
