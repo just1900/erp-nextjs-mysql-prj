@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useSession, signOut } from "next-auth/react";
 import {
   LayoutDashboard,
   Package,
@@ -13,7 +14,8 @@ import {
   Settings,
   CreditCard,
   History,
-  Tags
+  Tags,
+  LogOut
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -33,6 +35,7 @@ const menuItems = [
 
 export function Sidebar() {
   const pathname = usePathname();
+  const { data: session } = useSession();
 
   return (
     <div className="flex h-full w-64 flex-col bg-white border-r border-slate-200">
@@ -59,13 +62,26 @@ export function Sidebar() {
         ))}
       </nav>
       <div className="p-4 border-t border-slate-200">
-        <div className="flex items-center gap-3 px-3 py-2">
-          <div className="h-8 w-8 rounded-full bg-slate-200 animate-pulse" />
+        <div className="flex items-center gap-3 mb-4 px-3 py-2">
+          <div className="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">
+            {session?.user?.name?.[0] || "U"}
+          </div>
           <div className="flex-1 overflow-hidden">
-            <p className="text-sm font-medium text-slate-900 truncate">Administrator</p>
-            <p className="text-xs text-slate-500 truncate">admin@erp.com</p>
+            <p className="text-sm font-medium text-slate-900 truncate">
+              {session?.user?.name || "User"}
+            </p>
+            <p className="text-xs text-slate-500 truncate">
+              {session?.user?.email || "user@erp.com"}
+            </p>
           </div>
         </div>
+        <button
+          onClick={() => signOut({ callbackUrl: "/login" })}
+          className="flex w-full items-center gap-3 px-3 py-2 text-sm font-medium text-red-600 rounded-lg hover:bg-red-50 transition-all duration-200"
+        >
+          <LogOut className="h-5 w-5" />
+          Logout
+        </button>
       </div>
     </div>
   );

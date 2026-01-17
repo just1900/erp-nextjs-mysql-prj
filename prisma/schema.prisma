@@ -82,7 +82,7 @@ model Product {
 
 model Customer {
   id          String    @id @default(cuid())
-  name        String
+  name        String    @unique
   contact     String?
   phone       String?
   email       String?
@@ -94,7 +94,7 @@ model Customer {
 
 model Supplier {
   id             String    @id @default(cuid())
-  name           String
+  name           String    @unique
   contact        String?
   phone          String?
   email          String?
