@@ -1,0 +1,54 @@
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   .gitignore
+	new file:   app/api/categories/[id]/route.ts
+	new file:   app/api/categories/route.ts
+	new file:   app/api/customers/[id]/route.ts
+	new file:   app/api/customers/route.ts
+	new file:   app/api/finance/route.ts
+	new file:   app/api/inventory/route.ts
+	new file:   app/api/procurement/[id]/route.ts
+	new file:   app/api/procurement/route.ts
+	new file:   app/api/products/[id]/route.ts
+	new file:   app/api/products/route.ts
+	new file:   app/api/sales/[id]/route.ts
+	new file:   app/api/sales/route.ts
+	new file:   app/api/suppliers/[id]/route.ts
+	new file:   app/api/suppliers/route.ts
+	new file:   app/api/warehouses/[id]/route.ts
+	new file:   app/api/warehouses/route.ts
+	new file:   app/categories/page.tsx
+	new file:   app/customers/page.tsx
+	new file:   app/finance/page.tsx
+	new file:   app/globals.css
+	new file:   app/inventory/page.tsx
+	new file:   app/layout.tsx
+	new file:   app/page.tsx
+	new file:   app/procurement/page.tsx
+	new file:   app/products/page.tsx
+	new file:   app/sales/page.tsx
+	new file:   app/suppliers/page.tsx
+	new file:   app/warehouses/page.tsx
+	new file:   components/modal.tsx
+	new file:   components/sidebar.tsx
+	new file:   debug-url.js
+	new file:   lib/prisma.ts
+	new file:   lib/utils.ts
+	new file:   next.config.mjs
+	new file:   package-lock.json
+	new file:   package.json
+	new file:   postcss.config.mjs
+	new file:   prisma/schema.prisma
+	new file:   prisma/seed.js
+	new file:   tailwind.config.js
+	new file:   test-conn.js
+	new file:   tsconfig.json
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	git_status.txt
+
